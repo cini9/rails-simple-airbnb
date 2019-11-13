@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Flat.destroy_all
+
+10.times do
+  Flat.create!(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.full_address,
+    description: Faker::Restaurant.description,
+    price_per_night: Faker::Number.within(range: 50..200),
+    number_of_guests: Faker::Number.within(range: 1..10),
+    image_url: "https://picsum.photos/350/180"
+  )
+end

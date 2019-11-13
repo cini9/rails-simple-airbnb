@@ -1,5 +1,7 @@
 {
   "name": "rails-simple-airbnb",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "botstrap": "^0.20.1"
+  }
 }

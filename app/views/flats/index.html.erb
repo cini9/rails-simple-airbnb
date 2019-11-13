@@ -1,0 +1,28 @@
+<h1>All our Flats</h1>
+<p>All <%= @flats.count %> flats.</p>
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="flat-card col-4 mb-3">
+      <%= image_tag flat.image_url, alt: "myImage" %>
+      <div class="flat-body">
+        <div class="flat-head">
+          <h4><%= flat.name %></h4>
+          <%= flat.address %>
+          <div class="flat-info">
+            <div class="price-per-night mr-5">
+              <span class="glyphicon glyphicon-euro mr-2"></span><%= flat.price_per_night %>
+            </div>
+            <div class="number-of-guests mr-5">
+              <span class="glyphicon glyphicon-user mr-2"></span><%= flat.number_of_guests %>
+            </div>
+          </div>
+        </div>
+        <div class="flat-actions">
+          <%= link_to "More info", flat_path(flat), class: "text-primary" %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "text-warning" %>
+          <%= link_to "Remove", flat_path(flat), method: :delete, class: "text-danger" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

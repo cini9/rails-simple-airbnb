@@ -1,0 +1,35 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.flat-body {
+  background-color: #F8F9FA;
+  box-shadow: 1px 1px 3px lightgrey;
+  border-radius: 5px;
+
+  .flat-head {
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .flat-info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .flat-actions {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+
+    a {
+      margin: 10px 10px;
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+<div class="form">
+  <%= simple_form_for @flat do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :number_of_guests %>
+    <%= f.input :price_per_night %>
+    <%= f.input :image_url, disabled: true, input_html: { value: "https://picsum.photos/350/180" } %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
